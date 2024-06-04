@@ -1,11 +1,16 @@
 package com.example.taskmanager;
 
+import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.CompoundButton;
+import android.widget.DatePicker;
 import android.widget.Switch;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,9 +20,13 @@ import androidx.core.view.WindowInsetsCompat;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import java.util.Calendar;
+import java.util.Locale;
+
 public class create extends AppCompatActivity {
     private Switch switchView;
     Button sub,category;
+    TextView date;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -60,12 +69,50 @@ public class create extends AppCompatActivity {
                 transaction.commit();
             }
         });
+        String[] dropdownItems = {"Item 1", "Item 2", "Item 3", "Item 4", "Item 5"};
+        AutoCompleteTextView autoCompleteTextView = findViewById(R.id.autoCompleteTextView);
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_dropdown_item_1line, dropdownItems);
+        autoCompleteTextView.setAdapter(adapter);
 
 
+        date=findViewById(R.id.due);
+                date.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openDatePicker();
+
+            }
+        });
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
     }
+    public void openDatePicker() {
+        // Get today's date
+        Calendar calendar = Calendar.getInstance();
+        int year = calendar.get(Calendar.YEAR);
+        int month = calendar.get(Calendar.MONTH);
+        int day = calendar.get(Calendar.DAY_OF_MONTH);
+
+        DatePickerDialog datePickerDialog = new DatePickerDialog(create.this, new DatePickerDialog.OnDateSetListener() {
+            @Override
+            public void onDateSet(DatePicker datePicker, int year, int month, int day) {
+                // Month is 0-based, so add 1 to get the correct month
+                month += 1;
+                // Format the selected date
+                String selectedDate = String.format(Locale.getDefault(), "%02d/%02d/%02d", day, month, year % 100);
+                // Showing the picked value in the textView
+                date.setText(selectedDate);
+            }
+        }, year, month, day);
+
+        // Set the minimum date to today's date
+        datePickerDialog.getDatePicker().setMinDate(calendar.getTimeInMillis());
+
+        // Show the date picker dialog
+        datePickerDialog.show();
+    }
+
 }
