@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Task MANAGER</string>
+    <string name="view_tasks">View Tasks</string>
+    <string name="create_task">Create Task</string>
+    <string name="dd_mm_yy">DD/MM/YY</string>
+    <string name="enter_due_date">Enter due date</string>
+    <string name="to_do">To Do</string>
+    <string name="in_progress">In Progress</string>
+    <string name="completed">completed</string>
+    <string name="add_sub_tasks">Add Sub tasks</string>
+    <string name="task_description">Task description</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

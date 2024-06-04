@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".subtaskk"
+    android:background="@color/brown">
+    <TextView
+        android:id="@+id/headtext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add subtask"
+        android:textSize="32sp"
+        android:textColor="@color/white"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="40dp"/>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewdonor"
+        android:layout_width="380dp"
+        android:layout_height="650dp"
+        app:cardBackgroundColor="@android:color/white"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="10dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="25dp"
+        app:cardMaxElevation="12dp"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="true"
+        >
+        <TextView
+            android:id="@+id/subtaskname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="12dp"
+            android:text="Enter Task Title"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/subeditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="52dp"
+            android:ems="10"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:hint="task title"
+            android:inputType="text" />
+
+        <TextView
+            android:id="@+id/subtaskdesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="122dp"
+            android:text="Enter task Description"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/subtaskdes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="152dp"
+            android:ems="10"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:hint="@string/task_description"
+            android:inputType="textLongMessage" />
+
+        <TextView
+            android:id="@+id/subduedate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="202dp"
+            android:text="@string/enter_due_date"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/subdue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="232dp"
+            android:ems="10"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:hint="@string/dd_mm_yy"
+            android:inputType="date" />
+
+        <TextView
+            android:id="@+id/substatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="282dp"
+            android:text="Status of task"
+            android:textSize="18sp" />
+
+        <RadioGroup
+            android:id="@+id/idRadioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <RadioButton
+                android:id="@+id/todo"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="320dp"
+                android:gravity="start"
+                android:padding="4dp"
+                android:text="@string/to_do"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <RadioButton
+                android:id="@+id/progress"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:gravity="start"
+                android:padding="4dp"
+                android:text="@string/in_progress"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <RadioButton
+                android:id="@+id/completed"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:gravity="start"
+                android:padding="4dp"
+                android:text="@string/completed"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+
+        </RadioGroup>
+        <TextView
+            android:id="@+id/subflag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="500dp"
+            android:text="Add Remainder"
+            android:textSize="15sp"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/subcreate"
+            android:layout_marginTop="490dp"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:backgroundTint="@color/brown"
+            android:text="Create" />
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</FrameLayout>

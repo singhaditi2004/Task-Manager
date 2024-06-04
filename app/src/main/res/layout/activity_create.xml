@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".create"
+    android:background="@color/ivory"
+    android:fitsSystemWindows="true"
+   >
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+    </FrameLayout>
+    <TextView
+        android:id="@+id/createhead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/comic_neue"
+        android:text="Create Task"
+        android:textFontWeight="900"
+        android:textSize="32sp"
+        android:layout_marginBottom="35dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.063"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.036" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewdonor"
+        android:layout_width="380dp"
+        android:layout_height="650dp"
+        app:cardBackgroundColor="@android:color/white"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="10dp"
+        android:layout_marginTop="25dp"
+        app:cardMaxElevation="12dp"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.464">
+
+
+        <TextView
+            android:id="@+id/taskname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="12dp"
+            android:text="Enter Task Title"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="52dp"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="task title"
+            android:inputType="text" />
+
+        <TextView
+            android:id="@+id/taskdesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="116dp"
+            android:text="Enter task Description"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/taskdes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="152dp"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="@string/task_description"
+            android:inputType="textLongMessage" />
+
+        <TextView
+            android:id="@+id/duedate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="202dp"
+            android:text="@string/enter_due_date"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/due"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="232dp"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="@string/dd_mm_yy"
+            android:inputType="date" />
+
+        <TextView
+            android:id="@+id/status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="282dp"
+            android:text="Status of task"
+            android:textSize="18sp" />
+        <RadioGroup
+            android:id="@+id/idRadioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <RadioButton
+                android:id="@+id/todo"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="320dp"
+                android:gravity="start"
+                android:padding="4dp"
+                android:text="@string/to_do"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:id="@+id/progress"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:gravity="start"
+                android:padding="4dp"
+                android:text="@string/in_progress"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:id="@+id/completed"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:gravity="start"
+                android:padding="4dp"
+                android:text="@string/completed"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+
+        </RadioGroup>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="500dp"
+            android:text="Add Remainder"
+            android:textSize="15sp" />
+
+        <Switch
+            android:id="@+id/addremainder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="130dp"
+            android:layout_marginTop="500dp" />
+
+        <Button
+            android:id="@+id/subtask"
+            android:layout_width="140dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="187dp"
+            android:layout_marginTop="490dp"
+            android:backgroundTint="@color/brown"
+            android:paddingStart="10dp"
+            android:text="@string/add_sub_tasks"
+            android:textSize="12sp"
+            app:icon="@drawable/add" />
+
+        <Button
+            android:id="@+id/category"
+            android:layout_width="140dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="187dp"
+            android:layout_marginTop="550dp"
+            android:backgroundTint="@color/brown"
+            android:paddingStart="10dp"
+            android:text="Add category"
+            android:textSize="12sp"
+            app:icon="@drawable/add" />
+
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/idTVStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="Status"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="690dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.937" />
+
+
+
+    <!-- Container for the dialog fragment -->
+    <FrameLayout
+        android:id="@+id/dialog_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="50dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,51 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/wheat">
+    <TextView
+        android:id="@+id/headt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add remainder"
+        android:textSize="32sp"
+        android:layout_marginBottom="20dp"
+        android:layout_weight="900"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"/>
+    <Button
+        android:id="@+id/daily"
+        android:layout_width="220dp"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:text="Daily"
+        android:backgroundTint="@color/brown"
+        />
+
+    <Button
+        android:id="@+id/weekly"
+        android:layout_width="220dp"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:text="Weekly"
+        android:backgroundTint="@color/brown"
+        />
+    <Button
+        android:id="@+id/specific"
+        android:layout_width="220dp"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:text=" Monthly "
+        android:backgroundTint="@color/brown"
+        />
+
+    <TextView
+        android:id="@+id/datespeci"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="900"
+        android:text="TextView" />
+
+
+</LinearLayout>
