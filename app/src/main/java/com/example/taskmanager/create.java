@@ -20,7 +20,11 @@ import androidx.core.view.WindowInsetsCompat;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.google.android.material.textfield.TextInputLayout;
+
+import java.util.Arrays;
 import java.util.Calendar;
+import java.util.List;
 import java.util.Locale;
 
 public class create extends AppCompatActivity {
@@ -54,6 +58,19 @@ public class create extends AppCompatActivity {
                         .commit();
             }
         });
+        List<String> items = Arrays.asList("Material", "Design", "Components", "Android");
+
+        // Find the TextInputLayout
+        TextInputLayout textField = findViewById(R.id.dropdown);
+
+        // Create an ArrayAdapter with the list of items
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, R.layout.list_item, items);
+
+        // Get the AutoCompleteTextView from the TextInputLayout and set the adapter
+        AutoCompleteTextView autoCompleteTextView = (AutoCompleteTextView) textField.getEditText();
+        if (autoCompleteTextView != null) {
+            autoCompleteTextView.setAdapter(adapter);
+        }
         category=findViewById(R.id.category);
         category.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -69,10 +86,6 @@ public class create extends AppCompatActivity {
                 transaction.commit();
             }
         });
-        String[] dropdownItems = {"Item 1", "Item 2", "Item 3", "Item 4", "Item 5"};
-        AutoCompleteTextView autoCompleteTextView = findViewById(R.id.autoCompleteTextView);
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_dropdown_item_1line, dropdownItems);
-        autoCompleteTextView.setAdapter(adapter);
 
 
         date=findViewById(R.id.due);
