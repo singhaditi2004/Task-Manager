@@ -62,7 +62,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="62dp"
             android:text="Enter Task Title"
             android:textSize="18sp" />
 
@@ -71,7 +71,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
-            android:layout_marginTop="52dp"
+            android:layout_marginTop="92dp"
             android:ems="10"
             android:gravity="center"
             android:hint="task title"
@@ -83,7 +83,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
-            android:layout_marginTop="116dp"
+            android:layout_marginTop="146dp"
             android:text="Enter task Description"
             android:textSize="18sp" />
 
@@ -92,7 +92,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
-            android:layout_marginTop="152dp"
+            android:layout_marginTop="172dp"
             android:ems="10"
             android:gravity="center"
             android:hint="@string/task_description"
@@ -103,7 +103,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="202dp"
+            android:layout_marginTop="232dp"
             android:text="@string/enter_due_date"
             android:textSize="20sp" />
 
@@ -112,7 +112,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="235dp"
+            android:layout_marginTop="275dp"
             android:ems="10"
             android:gravity="center"
             android:hint="@string/dd_mm_yy"
@@ -123,7 +123,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="282dp"
+            android:layout_marginTop="310dp"
             android:text="Status of task"
             android:textSize="18sp" />
 
@@ -134,9 +134,9 @@
             android:layout_width="270dp"
             android:layout_height="wrap_content"
             android:background="@color/brown"
-            android:layout_marginTop="320dp"
+            android:layout_marginTop="358dp"
             android:layout_gravity="center_horizontal"
-            android:padding="3dp">
+            android:padding="1dp">
 
             <AutoCompleteTextView
                 android:background="@color/white"
@@ -151,7 +151,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="500dp"
+            android:layout_marginTop="443dp"
             android:text="Add Remainder"
             android:textSize="15sp" />
 
@@ -160,14 +160,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="130dp"
-            android:layout_marginTop="500dp" />
+            android:layout_marginTop="440dp" />
 
         <Button
             android:id="@+id/subtask"
             android:layout_width="140dp"
             android:layout_height="50dp"
             android:layout_marginLeft="187dp"
-            android:layout_marginTop="490dp"
+            android:layout_marginTop="430dp"
             android:backgroundTint="@color/brown"
             android:paddingStart="10dp"
             android:text="@string/add_sub_tasks"
@@ -179,7 +179,7 @@
             android:layout_width="140dp"
             android:layout_height="50dp"
             android:layout_marginLeft="187dp"
-            android:layout_marginTop="550dp"
+            android:layout_marginTop="490dp"
             android:backgroundTint="@color/brown"
             android:paddingStart="10dp"
             android:text="Add category"
