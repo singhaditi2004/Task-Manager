@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Selected state -->
     <item android:color="@color/ivory" android:state_selected="true"/>
+
+    <!-- Pressed state -->
     <item android:color="@color/wheat" android:state_pressed="true"/>
-    <item android:color="@color/brown" android:state_focused="true"/>
+
+    <!-- Focused state with #C39B5F color -->
+    <item android:color="#EF2E3F" android:state_focused="true"/>
+
+    <!-- Transparent for default states -->
     <item android:color="@android:color/transparent"/>
 </selector>
