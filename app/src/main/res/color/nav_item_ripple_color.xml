@@ -8,7 +8,7 @@
 
     <!-- Focused state with #C39B5F color -->
     <item android:color="#EF2E3F" android:state_focused="true"/>
-
+    <item android:color="#000" android:state_checked="true"/>
     <!-- Transparent for default states -->
     <item android:color="@android:color/transparent"/>
 </selector>
